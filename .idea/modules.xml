@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CS302-Java-2020-Group16.iml" filepath="$PROJECT_DIR$/.idea/CS302-Java-2020-Group16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TradeCheck.iml" filepath="$PROJECT_DIR$/.idea/modules/TradeCheck.iml" group="TradeCheck" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TradeCheck/app" />
     </modules>
   </component>
 </project>
