@@ -1,3 +1,5 @@
+package com.example.tradecheck;
+
 public class Company {
     private String name;
     private String country;
