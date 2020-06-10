@@ -9,6 +9,15 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:textSize="24dp"
+        android:gravity="center"
+        />
+
     <ListView
         android:id="@+id/TradeView"
         android:layout_width="match_parent"
