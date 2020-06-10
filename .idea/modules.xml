@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CS302-Java-2020-Group16-TradeCheck.iml" filepath="$PROJECT_DIR$/.idea/modules/CS302-Java-2020-Group16-TradeCheck.iml" group="TradeCheck" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TradeCheck.iml" filepath="$PROJECT_DIR$/.idea/modules/TradeCheck.iml" group="TradeCheck" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TradeCheck-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TradeCheck-app.iml" group="TradeCheck/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TradeCheck/app" />
     </modules>
   </component>
