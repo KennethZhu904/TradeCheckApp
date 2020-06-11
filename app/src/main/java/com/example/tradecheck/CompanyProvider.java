@@ -8,7 +8,7 @@ public class CompanyProvider {
    // static String[] companyNames= {"Microsoft, PWC, Spark NZ, Fonterra, HoneyWell, Qantas,Singapore Airlines "};
     static String[] ids= {"001","002","003","004"};
     static String[] countries={ "Australia","NZ", "Singapore","United States"};
-    static int[] pictures={R.drawable.AU,R.drawable.NZ,R.drawable.SG,R.drawable.US};
+    static int[] pictures={R.drawable.au,R.drawable.nz,R.drawable.sg,R.drawable.us};
 
 
     public static String[] getCountries() {
