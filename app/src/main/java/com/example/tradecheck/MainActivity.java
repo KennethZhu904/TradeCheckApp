@@ -3,6 +3,7 @@ package com.example.tradecheck;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
