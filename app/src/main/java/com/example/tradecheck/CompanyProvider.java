@@ -1,23 +1,33 @@
 package com.example.tradecheck;
 
+import java.util.ArrayList;
+
 public class CompanyProvider {
 
 
-    static String[] companyNames= {"Microsoft, PWC, Spark nz, Fonterra, HoneyWell, Qantas,Singapore Airlines "};
-    static String[] ids= {"001","002","003","004","005","006","007"};
-    static String[] countries={ "Australia","nz", "Singapore","United States"};
-    static String[] pictures={"AU","nz","sg","us"};
+   // static String[] companyNames= {"Microsoft, PWC, Spark NZ, Fonterra, HoneyWell, Qantas,Singapore Airlines "};
+    static String[] ids= {"001","002","003","004"};
+    static String[] countries={ "Australia","NZ", "Singapore","United States"};
+    static int[] pictures={R.drawable.au,R.drawable.nz,R.drawable.sg,R.drawable.us};
 
 
+    public static String[] getCountries() {
+        return countries;
+    }
+
+    public static ArrayList<Countries> generateData() {
+        ArrayList<Countries> listOfCountries = new ArrayList<Countries>();
 
 
+        for (int i = 0; i < 4; i++) {
 
-
-
-
-
-
-
-
+            String id = ids[i];
+            String countriesname = countries[i];
+            int flags = pictures[i];
+            Countries aCountry = new Countries(countriesname, flags, id);
+            listOfCountries.add(aCountry);
+        }
+        return listOfCountries;
+    }
 
 }
