@@ -17,7 +17,7 @@
 
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/AU"
+            android:src="@drawable/au"
             android:id="@+id/countryflag" />
 
         <TextView
