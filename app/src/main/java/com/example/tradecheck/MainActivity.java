@@ -1,6 +1,7 @@
 package com.example.tradecheck;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -17,12 +18,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Declare the ListView and the Adapter
+        ListView tradeview;
+        CompaniesAdapter companyAdapter;
+        ArrayList<Countries> aCompany;
 
-          String[] countries= CompanyProvider.getCountries();
-        List<String> countriesNames=new ArrayList(Arrays.asList(countries));
+            tradeview = (ListView) findViewById(R.id.tradeview);
+            ArrayList<Countries> aBooks = new ArrayList<Countries>();
 
-        ArrayAdapter<String> countriesAdapter=new ArrayAdapter<String>(this,R.layout.category_layout_list,countriesNames);
-        ListView listView= findViewById(R.id.tradeview);
+
+            aBooks = CompanyProvider.generateData();
+            companyAdapter = new CompaniesAdapter(this, aBooks);
+
+            //Set that adapter to the listview
+            tradeview.setAdapter(companyAdapter);
+
+            LinearLayoutManager lm = new LinearLayoutManager(this);
+
+
+        }
+
 
     }
-}
