@@ -1,6 +1,8 @@
 package com.example.tradecheck;
 
-public class Company {
+import java.io.Serializable;
+
+public class Company implements Serializable {
     private String name;
     private String country;
     private String id;
