@@ -1,5 +1,32 @@
 package com.example.tradecheck;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.view.ViewGroup;
+
+import android.view.View;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bumptech.glide.Glide;
+import com.smarteist.autoimageslider.SliderViewAdapter;
+
+import com.smarteist.autoimageslider.SliderView;
+import java.util.ArrayList;
+
 public class StockSliderAdapter extends
         SliderViewAdapter<StockSliderAdapter.SliderAdapterVH> {
 
@@ -25,9 +52,10 @@ public class StockSliderAdapter extends
         notifyDataSetChanged();
     }
 
+
     @Override
     public SliderAdapterVH onCreateViewHolder(ViewGroup parent) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_slider_layout_item, null);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_company__details, null);
         return new SliderAdapterVH(inflate);
     }
 
@@ -67,9 +95,9 @@ public class StockSliderAdapter extends
 
         public SliderAdapterVH(View itemView) {
             super(itemView);
-            imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
-            imageGifContainer = itemView.findViewById(R.id.iv_gif_container);
-            textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
+//            imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
+//            imageGifContainer = itemView.findViewById(R.id.iv_gif_container);
+//            textViewDescription = itemView.findViewById(R.id.tv_auto_image_slider);
             this.itemView = itemView;
         }
     }
