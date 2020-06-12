@@ -3,6 +3,8 @@ package com.example.tradecheck;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
+import android.view.View;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import com.smarteist.autoimageslider.SliderView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,27 +27,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Declare the ListView and the Adapter
+        //Declare the ListView, CardVi and the Adapter
         ListView tradeview;
         CompaniesAdapter companyAdapter;
+
+        //Declare Array List
         ArrayList<Countries> aCompany;
-
+        //Assign the id of tradeview to the trade view.
         tradeview = (ListView) findViewById(R.id.tradeview);
-        ArrayList<Countries> aBooks = new ArrayList<Countries>();
-
-
-        aBooks = CompanyProvider.generateData();
-        companyAdapter = new CompaniesAdapter(this, aBooks);
+        ArrayList<Countries> aCountry = new ArrayList<Countries>();
+        aCountry = CompanyProvider.generateData();
+        companyAdapter = new CompaniesAdapter(this, aCountry);
 
         //Set that adapter to the listview
         tradeview.setAdapter(companyAdapter);
-
         LinearLayoutManager lm = new LinearLayoutManager(this);
 
-//        SliderView sliderView = findViewById(R.id.imageSlider);
+
+        ///ATTEMPT TO GET IT WORKING but idk what does the error mesage means
+//        tradeview.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //
-//        StockSliderAdapter adapter = new StockSliderAdapter(this);
-//
+//                Intent companiesIntent= new Intent(getBaseContext(), CompaniesActivity.class);
+//                companiesIntent.putExtra("CategoryMessage", "This message come from categories");
+//                startActivity(companiesIntent);
+//            }
+//        });
+
+
 //        sliderView.setSliderAdapter(adapter);
 //
 //        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
@@ -57,5 +68,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        //UNCOMMENT THAT and use the intent above.
+
+//Intent to the Companies Activity
+    public void showCompaniesActivity(View v){
+    Intent companiesIntent= new Intent(this, CompaniesActivity.class);
+    startActivity(companiesIntent);
+
+    }
 
     }

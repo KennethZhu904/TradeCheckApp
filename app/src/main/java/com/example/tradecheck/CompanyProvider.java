@@ -15,7 +15,7 @@ public class CompanyProvider {
     static int[] SingaporeId={7};
     static int[] USId={1, 2};
 
-    static int[] pictures={R.drawable.au,R.drawable.nz,R.drawable.sg,R.drawable.us};
+    static int[] pictures={R.drawable.au,R.drawable.nz,R.drawable.sg,R.drawable.us}; //Just a small letter. Should be the same as the file name.
 
     public static int[] getCompanyIDs(String country) {
         int[] companyIDs = AustraliaId;
