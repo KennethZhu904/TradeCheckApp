@@ -32,6 +32,8 @@ public class StockSliderAdapter extends
 
     private Context context;
     private List<SliderItem> mSliderItems = new ArrayList<>();
+    // Images to slide through
+    private int[] image_resources = {R.drawable.day, R.drawable.month, R.drawable.year};
 
     public StockSliderAdapter(Context context) {
         this.context = context;
