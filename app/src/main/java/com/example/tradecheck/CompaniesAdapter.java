@@ -18,10 +18,11 @@ import java.util.List;
 
 public class CompaniesAdapter extends ArrayAdapter<Countries> {
 
-    private static class ViewHolder{
+    static class ViewHolder{
 
         public ImageView countryflag;
         public TextView  countrytext;
+
 
     }
 
@@ -40,6 +41,8 @@ public class CompaniesAdapter extends ArrayAdapter<Countries> {
     public View getView(int position, View convertView, ViewGroup parent){
 
         final Countries country = getItem(position);
+
+        //ArrayList<Company> companyList = DataProvider.generateCompanies(DataProvider.AustraliaId);
 
         //Check if an existing view is being reused, otherwise inflate the view
 

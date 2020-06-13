@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_margin="8dp"
     android:elevation="4dp"
-    android:id="@+id/companies_viewer"
+    android:id="@+id/cardboard_company_list"
+    android:onClick="showCompaniesActivity"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -17,17 +18,17 @@
 
         <ImageView
 
-            android:id="@+id/countryflag"
+            android:id="@+id/companyimage"
             android:layout_width="100dp"
             android:layout_height="67dp" />
 
         <TextView
-            android:id="@+id/countrytext"
+            android:id="@+id/company_text"
             android:layout_width="0dp"
             android:layout_height="69dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Australia"
+            android:text="Fonterra"
             android:textSize="25dp"
 
 
