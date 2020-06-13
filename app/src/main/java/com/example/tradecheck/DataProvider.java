@@ -14,7 +14,7 @@ public class DataProvider {
 
     // Each Companies Respective Price and Description. [Index Match ID]
     static int[] price = {-127, 4, 59, -11, -8,	14,	14,	51, 82, 11};
-    static String[] description= {"Microsoft", "Countdown is very col that are a company that does x and y and they have lots of swagger please can this work argle bargle", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
+    static String[] description= {"Microsoft", "Countdown", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
 
     // Company Popularity [Initially Zero, Increases every click]
     static int[] popularity = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -76,7 +76,11 @@ public class DataProvider {
 
         StockInfo stock = generateStockInfo(id);
 
-        return new Company(companyNames[id], id, "Temp Country", logo, popularity[id], description[id], stock );
+        //Generate a generic description for each company
+        String description = companyNames[id] + " is a successful business whose stock are available on the market. This has been an interesting year for " + companyNames[id]
+                + "their stock is available for the " + stock.getPrice();
+
+        return new Company(companyNames[id], id, "Temp Country", logo, popularity[id], description, stock );
     }
 
     // Generate Companies Given ID Numbers

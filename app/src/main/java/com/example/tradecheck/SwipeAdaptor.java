@@ -12,7 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class SwipeAdaptor extends PagerAdapter {
-    private int[] image_resources = {R.drawable.day_000, R.drawable.month_000, R.drawable.years_000};
+    private int[] image_resources = {R.drawable.day_001, R.drawable.month_001, R.drawable.years_001};
+    String [] image_timeFrames = {"Day", "Month", "Year"};
     private Context context;
     private LayoutInflater layoutInflater;
 
@@ -41,7 +42,7 @@ public class SwipeAdaptor extends PagerAdapter {
 
         //Set the resources
         imageView.setImageResource(image_resources[position]);
-        textView.setText("Image :" + position);
+        textView.setText(image_timeFrames[position]);
 
         container.addView(item_view);
 

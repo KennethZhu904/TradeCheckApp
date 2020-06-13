@@ -14,7 +14,13 @@
         android:id="@+id/stockTime"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Hello World" />
+        android:layout_gravity="center"
+        android:layout_marginTop="-60dp"
+        android:textStyle="bold"
+        android:textColor="#f47100"
+        android:textSize="30dp"
+        android:fontFamily="monospace"
+        android:text="Day/Month/Year" />
 
 
 </LinearLayout>
