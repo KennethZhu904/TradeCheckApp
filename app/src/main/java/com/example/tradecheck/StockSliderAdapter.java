@@ -6,26 +6,15 @@ import android.view.ViewGroup;
 
 import android.view.View;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.bumptech.glide.Glide;
 import com.smarteist.autoimageslider.SliderViewAdapter;
-
-import com.smarteist.autoimageslider.SliderView;
-import java.util.ArrayList;
 
 public class StockSliderAdapter extends
         SliderViewAdapter<StockSliderAdapter.SliderAdapterVH> {
@@ -33,7 +22,7 @@ public class StockSliderAdapter extends
     private Context context;
     private List<SliderItem> mSliderItems = new ArrayList<>();
     // Images to slide through
-    private int[] image_resources = {R.drawable.day, R.drawable.month, R.drawable.year};
+    private int[] image_resources = {R.drawable.day_000, R.drawable.month_000, R.drawable.years_000};
 
     public StockSliderAdapter(Context context) {
         this.context = context;

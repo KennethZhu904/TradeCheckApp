@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDetails;
     ViewFlipper vfStocks;
 
-    Company company = DataProvider.generateCompany(1);
+    Company company = DataProvider.generateCompany(4);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
