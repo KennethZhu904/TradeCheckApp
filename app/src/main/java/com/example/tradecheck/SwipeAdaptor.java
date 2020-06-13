@@ -35,13 +35,13 @@ public class SwipeAdaptor extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View item_view = layoutInflater.inflate(R.layout.activity_company__details, container, false);
-        ImageView imageView = (ImageView)item_view.findViewById(R.id.stockImage);
-        //TextView textView = item_view.findViewById(R.id.stockTime);
+        View item_view = layoutInflater.inflate(R.layout.stock_slider, container, false);
+         ImageView imageView = (ImageView)item_view.findViewById(R.id.stockImage);
+         TextView textView = (TextView)item_view.findViewById(R.id.stockTime);
 
         //Set the resources
         imageView.setImageResource(image_resources[position]);
-        //textView.setText()
+        textView.setText("Image :" + position);
 
         container.addView(item_view);
 
@@ -50,6 +50,6 @@ public class SwipeAdaptor extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((LinearLayout)object);
+        container.removeView((LinearLayout)object); //Relative Layout
     }
 }

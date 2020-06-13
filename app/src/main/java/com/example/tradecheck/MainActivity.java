@@ -102,6 +102,6 @@ public class MainActivity extends AppCompatActivity {
 //        vfStocks.setFlipInterval(3000);
 //        // set auto start for flipping between views
 //        vfStocks.setAutoStart(true);
-        //------------------------------------------------------------------------------
+////        ------------------------------------------------------------------------------
     }
 }

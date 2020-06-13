@@ -5,7 +5,16 @@
 
     <ImageView
         android:id="@+id/stockImage"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/stockTime"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:contentDescription="a thing" />
+        android:text="Hello World" />
+
+
 </LinearLayout>
