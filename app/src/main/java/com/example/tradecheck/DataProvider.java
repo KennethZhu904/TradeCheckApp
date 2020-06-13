@@ -86,7 +86,8 @@ public class DataProvider {
     }
 
     // Return ID of companies whose names are in search
-    public static int[] searchCompanies(String search){
+    public static int[] searchCompanies(String search)
+    {
         // Initialise Search list
         int foundSearches = 0;
         int[] searchIDs = new int[ids.length];
@@ -134,19 +135,19 @@ public class DataProvider {
         return countryNames;
     }
 
-//    public static ArrayList<Countries> generateData() {
-//        ArrayList<Countries> listOfCountries = new ArrayList<Countries>();
-//
-//
-//        for (int i = 0; i < 4; i++) {
-//
-//            String id = ids[i];
-//            String countriesname = countryNames[i];
-//            int flags = countryFlags[i];
-//            Countries aCountry = new Countries(countriesname, flags, id);
-//            listOfCountries.add(aCountry);
-//        }
-//        return listOfCountries;
-//    }
+    public static ArrayList<Countries> generateData() {
+        ArrayList<Countries> listOfCountries = new ArrayList<Countries>();
+
+
+        for (int i = 0; i < 4; i++) {
+
+            String id = Integer.toString(ids[i]);
+            String countriesname = countryNames[i];
+            int flags = countryFlags[i];
+            Countries aCountry = new Countries(countriesname, flags, id);
+            listOfCountries.add(aCountry);
+        }
+        return listOfCountries;
+    }
 
 }
