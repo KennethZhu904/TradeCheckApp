@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+// https://www.youtube.com/watch?v=nL0k2usU7I8 [SOURCE]
 public class SwipeAdaptor extends PagerAdapter {
     private int[] image_resources;
     String [] image_timeFrames = {"Day", "Month", "Year"};

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager vpStocks;
     SwipeAdaptor adaptor;
 
-    Company company = DataProvider.generateCompany(1);
+    Company company = DataProvider.generateCompany(0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
