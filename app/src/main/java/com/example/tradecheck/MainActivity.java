@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
         StockInfo stock = company.getStock();
 
         // Set Stock Text Values
-        String price = Integer.toString(stock.getPrice());
-        tvPrice.setText(price);
+        //String price = Integer.toString(stock.getPrice());
+        tvPrice.setText(stock.getPrice());
 
         // Set Screen Flipper Values
         int[] images = stock.getStock_images();

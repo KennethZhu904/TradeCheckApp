@@ -11,7 +11,7 @@ public class DataProvider {
 
     // Each Companies Respective Price and Description. [Index Match ID]
     static int[] price = {-127, 4, 59, -11, -8,	14,	14,	51, 82, 11};
-    static String[] description= {"Microsoft", "Countdown", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
+    static String[] description= {"Microsoft", "Countdown is very col that are a company that does x and y and they have lots of swagger please can this work argle bargle", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
 
     // Company Popularity [Initially Zero, Increases every click]
     static int[] popularity = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -30,14 +30,14 @@ public class DataProvider {
     // Generate StockData Given a ID Number
     public static StockInfo generateStockInfo(int id){
        int cost = price[id];
-       int[] graphLocation = {R.drawable.day, R.drawable.month, R.drawable.year};
+       int[] graphLocation = {R.drawable.day_001, R.drawable.month_001, R.drawable.years_001};
 
        return new StockInfo(cost, graphLocation);
     }
 
     // Generate A Company Object Given a ID Number
     public static Company generateCompany(int id){
-        int logo = R.drawable.us;
+        int logo = R.drawable.logo_001;
         StockInfo stock = generateStockInfo(id);
 
         return new Company(companyNames[id], id, "Temp Country", logo, popularity[id], description[id], stock );

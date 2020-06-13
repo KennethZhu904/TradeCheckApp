@@ -11,8 +11,9 @@ public class StockInfo {
     }
 
     // Getter Functions
-    public int getPrice(){
-        return this.price;
+    public String getPrice(){
+        String price = "Price: $" + Integer.toString(this.price) + "/share";
+        return price;
     }
 
     public int[] getStock_images(){
