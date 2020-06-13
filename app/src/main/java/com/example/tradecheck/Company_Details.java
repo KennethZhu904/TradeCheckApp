@@ -57,7 +57,8 @@ public class Company_Details extends AppCompatActivity {
         StockInfo stock = company.getStock();
 
         // Set Stock Text Values
-        tvPrice.setText(stock.getPrice());
+        String price = Integer.toString(stock.getPrice());
+        tvPrice.setText(price);
 
         // Set Screen Flipper Values
         int[] images = stock.getStock_images();
