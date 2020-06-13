@@ -7,16 +7,20 @@ public class Company {
     private int popularity;
     private String description;
     private int logoAddress;
+    private StockInfo stock;
 
-    public Company( String name, String id, String country, int logoAddress, int popularity, String description){
+    // Company Constructor
+    public Company( String name, String id, String country, int logoAddress, int popularity, String description, StockInfo stock){
         this.id = id;
         this.country = country;
         this.name = name;
         this.logoAddress = logoAddress;
         this.popularity = popularity;
         this.description = description;
+        this.stock = stock;
     }
 
+    // Getter Functions
     public String getName() {
         return name;
     }
@@ -39,5 +43,9 @@ public class Company {
 
     public int getLogo(){
         return logoAddress;
+    }
+
+    public StockInfo getStock(){
+        return this.stock;
     }
 }
