@@ -36,7 +36,8 @@ public class Company_Details extends AppCompatActivity {
         // Use the company to populate the data into the format
         Intent thisIntent = getIntent();
         // Use the book to populate the data into our views
-        Company company = (Company) thisIntent.getSerializableExtra(MainActivity.COMPANY_DETAIL_KEY);
+        //Company company = (Company) thisIntent.getSerializableExtra(MainActivity.COMPANY_DETAIL_KEY);
+        Company company = DataProvider.generateCompany(1);
         loadCompany(company);
     }
 

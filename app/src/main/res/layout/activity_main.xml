@@ -1,114 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".MainActivity">
 
 
-    <EditText
+    <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="Search"
-        android:textSize="24dp"
-        android:gravity="center"
-        />
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:text="Top Picks"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textSize="20dp"
-        />
-<!--    For the images-Layout in the Linear Layout-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-    >
+        android:orientation="vertical">
+
+        <ViewFlipper
+            android:id="@+id/stockData"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:src="@drawable/au"
-            android:id="@+id/first_image"
-            android:textAlignment="center">
+            android:id="@+id/companyLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-50dp"
+            android:contentDescription="the logo" />
 
-        </ImageView>
+        <TextView
+            android:id="@+id/companyPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:layout_marginStart="30dp"
+            android:textSize="30sp" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:src="@drawable/nz"
-            android:id="@+id/second_image"
-            android:textAlignment="center">
-        </ImageView>
-            />
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="-90dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="40sp" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:src="@drawable/sg"
-            >
-    </ImageView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="290dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/companyDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingStart="100dp"
+            android:paddingEnd="100dp"
+
+            android:layout_marginTop="-240dp"
+            android:textSize="20sp" />
+
 
     </LinearLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp">
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:text="Testing 1"
-            android:gravity="center"
-
-            ></TextView>
-
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:text="Testing 2"
-            android:gravity="center"
-
-            ></TextView>
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:text="Testing 3"
-            android:gravity="center"
-
-            ></TextView>
-
-
-
-
-
-</LinearLayout>
-
-
-    <ListView
-        android:id="@+id/tradeview"
-        android:layout_width="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="4sp"
-        android:padding="16dp"
-        android:layout_height="match_parent" />
-</LinearLayout>
+</ScrollView>
