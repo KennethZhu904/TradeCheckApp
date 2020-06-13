@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager vpStocks;
     SwipeAdaptor adaptor;
 
-    Company company = DataProvider.generateCompany(5);
+    Company company = DataProvider.generateCompany(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         tvPrice = findViewById(R.id.companyPrice);
         tvDetails = findViewById(R.id.companyDescription);
         vpStocks = (ViewPager)findViewById(R.id.stockData);
-        adaptor = new SwipeAdaptor(this);
+        adaptor = new SwipeAdaptor(this, company.getStock().getStock_images());
         vpStocks.setAdapter(adaptor);
 
 

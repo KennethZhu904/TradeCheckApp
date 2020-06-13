@@ -12,14 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class SwipeAdaptor extends PagerAdapter {
-    private int[] image_resources = {R.drawable.day_001, R.drawable.month_001, R.drawable.years_001};
+    private int[] image_resources;
     String [] image_timeFrames = {"Day", "Month", "Year"};
     private Context context;
     private LayoutInflater layoutInflater;
 
     // constructor only context
-    public SwipeAdaptor(Context ctx){
+    public SwipeAdaptor(Context ctx, int[] image_resources){
         this.context = ctx;
+        this.image_resources = image_resources;
     }
 
     @Override

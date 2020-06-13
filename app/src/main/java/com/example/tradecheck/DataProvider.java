@@ -13,7 +13,7 @@ public class DataProvider {
     static int[] ids = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
     // Each Companies Respective Price and Description. [Index Match ID]
-    static int[] price = {-127, 4, 59, -11, -8,	14,	14,	51, 82, 11};
+    static int[] price = {-127, 4, 59, -11, 30,	14,	14,	51, 82, 11};
     static String[] description= {"Microsoft", "Countdown", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
 
     // Company Popularity [Initially Zero, Increases every click]
