@@ -5,7 +5,6 @@
     android:layout_margin="8dp"
     android:elevation="4dp"
     android:id="@+id/cardboard_company_list"
-    android:onClick="showCompaniesActivity"
     android:layout_height="match_parent">
 
     <LinearLayout

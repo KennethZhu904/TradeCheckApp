@@ -2,15 +2,21 @@ package com.example.tradecheck;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.View;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -22,11 +28,23 @@ import java.util.List;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String COMPANY_DETAIL_KEY = "company";
+
+    ImageView ivLogo;
+    TextView tvName;
+    TextView tvPrice;
+    TextView tvDetails;
+
+    ViewPager vpStocks;
+    SwipeAdaptor adaptor;
+
+    Company company = DataProvider.generateCompany(12);
 
 
     //Declare the ListView and the Adapter
     ListView tradeview;
     CompaniesAdapter countryAdapter;
+//    CompaniesAdapter companyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //Assign the id of tradeview to the trade view.
         tradeview = (ListView) findViewById(R.id.tradeview);
         ArrayList<Countries> aCountry = new ArrayList<Countries>();
-        aCountry = CompanyProvider.generateData();
+        aCountry = DataProvider.generateData();
         countryAdapter = new CompaniesAdapter(this, aCountry);
 
         //Set that adapter to the listview
@@ -49,65 +67,32 @@ public class MainActivity extends AppCompatActivity {
 
         setupCompanySelectedListener();
 
-
-        ///ATTEMPT TO GET IT WORKING but idk what does the error mesage means
-//        tradeview.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
+        /////That i did
+//        ArrayList<Company> theCompany = new ArrayList<Company>();
+//        companyAdapter = new CompaniesAdapter(this, aCountry);
 //
-//                Intent companiesIntent= new Intent(getBaseContext(), CompaniesActivity.class);
-//                companiesIntent.putExtra("CategoryMessage", "This message come from categories");
-//                startActivity(companiesIntent);
-//            }
-//        });
+//        setupStockSelectedListener();
 
-
-//        sliderView.setSliderAdapter(adapter);
-//
-//        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-//        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-//        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-//        sliderView.setIndicatorSelectedColor(Color.WHITE);
-//        sliderView.setIndicatorUnselectedColor(Color.GRAY);
-//        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
-//        sliderView.startAutoCycle();
 
         }
 
+//        // Get stock data
+//        StockInfo stock = company.getStock();
 
 
-//    View.OnClickListener australiaclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "australia");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener nzclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "newzealand");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener singaporelickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "singapore");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener usclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(),CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "unitedstates");
-//            startActivity(companyactivity);
-//        }
-//    };
 
+//    public void setupStockSelectedListener(){
+//        tradeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                //Launch the detail view passing company as an extra
+//                Intent intent = new Intent(MainActivity.this, Company_Details.class);
+//
+//                intent.putExtra(COMPANY_DETAIL_KEY, companyAdapter.getItem(position));
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
     public void setupCompanySelectedListener(){
         tradeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -141,5 +126,5 @@ public class MainActivity extends AppCompatActivity {
 //
 //    }
 
-    }
+}
 

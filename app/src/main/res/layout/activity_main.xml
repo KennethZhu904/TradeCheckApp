@@ -18,7 +18,7 @@
         android:textSize="24dp"
         android:gravity="center"
         />
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="24dp"
@@ -27,13 +27,13 @@
         android:textAllCaps="true"
         android:textSize="20dp"
         />
-<!--    For the images-Layout in the Linear Layout-->
+    <!--    For the images-Layout in the Linear Layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
         android:layout_marginTop="15dp"
-    >
+        >
 
         <ImageView
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:id="@+id/second_image"
             android:textAlignment="center">
         </ImageView>
-            />
+        />
 
         <ImageView
             android:layout_width="0dp"
@@ -61,10 +61,10 @@
             android:layout_weight="1"
             android:src="@drawable/sg"
             >
-    </ImageView>
+        </ImageView>
 
     </LinearLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp">
@@ -101,7 +101,7 @@
 
 
 
-</LinearLayout>
+    </LinearLayout>
 
 
     <ListView
