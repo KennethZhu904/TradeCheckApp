@@ -37,8 +37,10 @@ public class Company_Details extends AppCompatActivity {
         // Use the company to populate the data into the format
         Intent thisIntent = getIntent();
 
-        //Company company = (Company) thisIntent.getSerializableExtra(MainActivity.COMPANY_DETAIL_KEY);
-        Company company = DataProvider.generateCompany(1);
+        //Connection code***************************************************************************
+        Company company = (Company) thisIntent.getSerializableExtra(MainActivity.COMPANY_DETAIL_KEY);
+        //Company company = DataProvider.generateCompany(1);
+        //==========================================================================================
 
         adaptor = new SwipeAdaptor(this, company.getStock().getStock_images());
         vpStocks.setAdapter(adaptor);

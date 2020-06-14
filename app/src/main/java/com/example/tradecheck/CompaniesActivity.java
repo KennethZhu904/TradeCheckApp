@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,12 +22,12 @@ import static com.example.tradecheck.DataProvider.SingaporeId;
 import static com.example.tradecheck.DataProvider.USId;
 
 public class CompaniesActivity extends AppCompatActivity {
+    public static final String COMPANY_DETAIL_KEY   = "company";
 
-   ListView companies_list;
+    ListView companies_list;
     TextView Companyname;
     ImageView Companypicture ;
-
-
+    CompanyDetailAdapter detailAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +78,19 @@ public class CompaniesActivity extends AppCompatActivity {
         companies_list.setAdapter(listcompanyadapter);
         LinearLayoutManager lm = new LinearLayoutManager(this);
 
+        detailAdapter = new CompanyDetailAdapter(this, aCompany);
 
+        setupStockSelectedListener();
+    }
 
+    public void setupStockSelectedListener() {
+        companies_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Launch the detail view passing book as an extra
+                Intent intent = new Intent(CompaniesActivity.this, Company_Details.class);
+                intent.putExtra(COMPANY_DETAIL_KEY, detailAdapter.getItem(position));
+                startActivity(intent);
+            }
+        });
     }
 }

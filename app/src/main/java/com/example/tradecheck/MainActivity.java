@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.View;
 
 import android.content.Intent;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     //Declare the ListView and the Adapter
     ListView tradeview;
     CompaniesAdapter countryAdapter;
+//    CompaniesAdapter companyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
         setupCompanySelectedListener();
 
+        /////That i did
+//        ArrayList<Company> theCompany = new ArrayList<Company>();
+//        companyAdapter = new CompaniesAdapter(this, aCountry);
+//
+//        setupStockSelectedListener();
+
 
         ///ATTEMPT TO GET IT WORKING but idk what does the error mesage means
 //        tradeview.setOnClickListener(new View.OnClickListener() {
@@ -78,20 +86,11 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
-//        sliderView.setSliderAdapter(adapter);
-//
-//        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-//        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-//        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-//        sliderView.setIndicatorSelectedColor(Color.WHITE);
-//        sliderView.setIndicatorUnselectedColor(Color.GRAY);
-//        sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
-//        sliderView.startAutoCycle();
 
         }
 
-        // Get stock data
-        StockInfo stock = company.getStock();
+//        // Get stock data
+//        StockInfo stock = company.getStock();
 
 
 //    View.OnClickListener australiaclickhandler = new View.OnClickListener() {
@@ -125,7 +124,18 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(companyactivity);
 //        }
 //    };
-
+//    public void setupStockSelectedListener(){
+//        tradeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                //Launch the detail view passing company as an extra
+//                Intent intent = new Intent(MainActivity.this, Company_Details.class);
+//
+//                intent.putExtra(COMPANY_DETAIL_KEY, companyAdapter.getItem(position));
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
     public void setupCompanySelectedListener(){
         tradeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -159,5 +169,5 @@ public class MainActivity extends AppCompatActivity {
 //
 //    }
 
-    }
+}
 
