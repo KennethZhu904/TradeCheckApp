@@ -1,6 +1,8 @@
 package com.example.tradecheck;
 
-public class StockInfo {
+import java.io.Serializable;
+
+public class StockInfo implements Serializable {
     private int price;
     private int[] stock_images;
 

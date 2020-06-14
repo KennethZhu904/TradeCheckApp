@@ -66,6 +66,7 @@ public class CompanyDetailAdapter extends ArrayAdapter<Company> {
 
         // Get stock data
         StockInfo stock = company.getStock();
+        viewHolder.tvPrice.setText(stock.getPrice());
 
 //        viewHolder.tvTitle.setText(book.getTitle());
 //        viewHolder.tvAuthor.setText(book.getAuthor());
