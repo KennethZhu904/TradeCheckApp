@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:id="@+id/cardboard_company_list"
+    android:onClick="showCompaniesActivity"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_margin="9dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+        <ImageView
+
+            android:id="@+id/companyimage"
+            android:layout_width="100dp"
+            android:layout_height="67dp" />
+
+        <TextView
+            android:id="@+id/companytext"
+            android:layout_width="0dp"
+            android:layout_height="69dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fonterra"
+            android:textSize="25dp"
+
+
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
