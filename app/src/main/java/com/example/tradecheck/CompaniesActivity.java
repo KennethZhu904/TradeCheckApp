@@ -28,6 +28,8 @@ public class CompaniesActivity extends AppCompatActivity {
     TextView Companyname;
     ImageView Companypicture ;
     CompanyDetailAdapter detailAdapter;
+    //Declare the adapter.
+    ListCompaniesAdapter listcompanyadapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +47,7 @@ public class CompaniesActivity extends AppCompatActivity {
         String categorytoopen = intent.getStringExtra("company");
 
 
-        //Declare the adapter.
-        ListCompaniesAdapter listcompanyadapter;
+
 
 
         // Set content view
@@ -77,9 +78,6 @@ public class CompaniesActivity extends AppCompatActivity {
         //Set that adapter to the listview
         companies_list.setAdapter(listcompanyadapter);
         LinearLayoutManager lm = new LinearLayoutManager(this);
-
-        detailAdapter = new CompanyDetailAdapter(this, aCompany);
-
         setupStockSelectedListener();
     }
 
@@ -88,7 +86,7 @@ public class CompaniesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Launch the detail view passing book as an extra
                 Intent intent = new Intent(CompaniesActivity.this, Company_Details.class);
-                intent.putExtra(COMPANY_DETAIL_KEY, detailAdapter.getItem(position));
+                intent.putExtra(COMPANY_DETAIL_KEY, listcompanyadapter.getItem(position));
                 startActivity(intent);
             }
         });

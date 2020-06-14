@@ -74,56 +74,13 @@ public class MainActivity extends AppCompatActivity {
 //        setupStockSelectedListener();
 
 
-        ///ATTEMPT TO GET IT WORKING but idk what does the error mesage means
-//        tradeview.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent companiesIntent= new Intent(getBaseContext(), CompaniesActivity.class);
-//                companiesIntent.putExtra("CategoryMessage", "This message come from categories");
-//                startActivity(companiesIntent);
-//            }
-//        });
-
-
-
         }
 
 //        // Get stock data
 //        StockInfo stock = company.getStock();
 
 
-//    View.OnClickListener australiaclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "australia");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener nzclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "newzealand");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener singaporelickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(), CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "singapore");
-//            startActivity(companyactivity);
-//        }
-//    };
-//
-//    View.OnClickListener usclickhandler = new View.OnClickListener() {
-//        public void onClick(View view) {
-//            Intent companyactivity = new Intent(getBaseContext(),CompaniesActivity.class);
-//            companyactivity.putExtra("MessageFromMainActivity", "unitedstates");
-//            startActivity(companyactivity);
-//        }
-//    };
+
 //    public void setupStockSelectedListener(){
 //        tradeview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
