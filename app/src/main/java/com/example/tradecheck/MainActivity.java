@@ -2,15 +2,20 @@ package com.example.tradecheck;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.view.View;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -22,6 +27,17 @@ import java.util.List;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String COMPANY_DETAIL_KEY = "company";
+
+    ImageView ivLogo;
+    TextView tvName;
+    TextView tvPrice;
+    TextView tvDetails;
+
+    ViewPager vpStocks;
+    SwipeAdaptor adaptor;
+
+    Company company = DataProvider.generateCompany(12);
 
 
     //Declare the ListView and the Adapter
@@ -74,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        // Get stock data
+        StockInfo stock = company.getStock();
 
 
 //    View.OnClickListener australiaclickhandler = new View.OnClickListener() {

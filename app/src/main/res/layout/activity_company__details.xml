@@ -14,47 +14,54 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
         android:orientation="vertical">
 
 <!--            Slider Layout Inspired by-->
-        <com.smarteist.autoimageslider.SliderView
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="600"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            app:sliderIndicatorMargin="15dp"
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="#5A5A5A"
-            app:sliderIndicatorUnselectedColor="#FFF"
-            app:sliderScrollTimeInSec="1"
-            app:sliderStartAutoCycle="true" />
+<!--        <com.smarteist.autoimageslider.SliderView-->
+<!--            android:id="@+id/imageSlider"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            app:sliderAnimationDuration="600"-->
+<!--            app:sliderAutoCycleDirection="back_and_forth"-->
+<!--            app:sliderAutoCycleEnabled="true"-->
+<!--            app:sliderIndicatorAnimationDuration="600"-->
+<!--            app:sliderIndicatorGravity="center_horizontal|bottom"-->
+<!--            app:sliderIndicatorMargin="15dp"-->
+<!--            app:sliderIndicatorOrientation="horizontal"-->
+<!--            app:sliderIndicatorPadding="3dp"-->
+<!--            app:sliderIndicatorRadius="2dp"-->
+<!--            app:sliderIndicatorSelectedColor="#5A5A5A"-->
+<!--            app:sliderIndicatorUnselectedColor="#FFF"-->
+<!--            app:sliderScrollTimeInSec="1"-->
+<!--            app:sliderStartAutoCycle="true" />-->
 
+        <ViewFlipper
+            android:id="@+id/stockData"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
 
         <ImageView
             android:id="@+id/companyLogo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="start"
+            android:scaleType="centerCrop"
             android:layout_marginStart="20dp"
             android:layout_marginTop="-50dp"/>
 
         <TextView
-            android:id="@+id/Price"
+            android:id="@+id/companyPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-40dp"
             android:layout_marginStart="30dp"
             android:text="The Price"
+            android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/Name"
+            android:id="@+id/companyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -71,7 +78,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/companyDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
