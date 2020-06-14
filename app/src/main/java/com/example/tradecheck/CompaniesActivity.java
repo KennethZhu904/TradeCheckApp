@@ -52,7 +52,7 @@ public class CompaniesActivity extends AppCompatActivity {
 
         // Create ListView objects to associate with XML views
         companies_list = (ListView) findViewById(R.id.companyview);
-        Companyname = (TextView) findViewById(R.id.company_text); //Similarly go for the coutnry text.
+        Companyname = (TextView) findViewById(R.id.companytext); //Similarly go for the coutnry text.
         Companypicture=(ImageView) findViewById(R.id.companyimage); // Check in regards to whether it clashes with the country list
 
         ArrayList<Company> aCompany = new ArrayList<Company>();

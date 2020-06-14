@@ -38,17 +38,17 @@ public class ListCompaniesAdapter extends ArrayAdapter<Company> {
 
         //Check if an existing view is being reused, otherwise inflate the view
 
-        ListCompaniesAdapter.ViewHolder viewHolder;
+        ViewHolder viewHolder;
 
         if (convertView == null){
-            viewHolder = new ListCompaniesAdapter.ViewHolder();
+            viewHolder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.company_list_layout,parent,false);
-            viewHolder.companyimage = (ImageView)convertView.findViewById(R.id.countryflag);
-            viewHolder.company_text = (TextView)convertView.findViewById(R.id.countrytext);
+            viewHolder.companyimage = (ImageView)convertView.findViewById(R.id.companyimage);
+            viewHolder.company_text = (TextView)convertView.findViewById(R.id.companytext);
             convertView.setTag(viewHolder);
         } else{
-            viewHolder = (ListCompaniesAdapter.ViewHolder) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         viewHolder.company_text.setText(company.getName());
