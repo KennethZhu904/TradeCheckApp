@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //Assign the id of tradeview to the trade view.
         tradeview = (ListView) findViewById(R.id.tradeview);
         ArrayList<Countries> aCountry = new ArrayList<Countries>();
-        aCountry = CompanyProvider.generateData();
+        aCountry = DataProvider.generateData();
         countryAdapter = new CompaniesAdapter(this, aCountry);
 
         //Set that adapter to the listview
