@@ -12,17 +12,18 @@ public class DataProvider {
     static String[] companyNames = {"Microsoft", "Woolworths", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs",
             "Air NZ", "BECA", "Barfoot and Thompson", "BNZ", "Weta Digital", "Mercury Energy", "Fletcher",
             "Billabong", "Cotton On", "Dick Smith", "Holden", "Oporto", "JB HiFi", "Crocodiles", "StarHub", "2C2P",
-            "Bread Talk", "Fraser and Neave", "Grab", "Ayam Brand", "Quest", "Slik Air"};
+            "Bread Talk", "Fraser and Neave", "Grab", "Ayam Brand", "Quest", "Slik Air", "McDonalds", "Apple", "BP",
+            "Adidas", "Amazon", "Ford", "Target", "Disney", "SpaceX"};
     static int[] ids = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
             23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40};
 
     // Each Companies Respective Price and Description. [Index Match ID]
-    static int[] price = {-127, 4, 59, -11, 30,	14,	14,	51, 82, 11, 143, 86, 59, 73, 46, 84, 1, -65, 58, 25, 76, -34, -77, 18, 41, -55, 33, 12, -98, 87, 2, 584, 11, 69, 420};
+    static int[] price = {-127, 4, 59, -11, 30,	14,	14,	51, 82, 11, 143, 86, 59, 73, 46, 84, 1, -65, 58, 25, 76, -34, -77, 18, 41, -55, 33, 12, -98, 87, 2, 584, 11, 69, 420, 245, 93, 76, 34, -45, 33, 67, 85, 74};
     static String[] description= {"Microsoft", "Countdown", "Singtel", "PWC", "Spark NZ", "Fonterra", "HoneyWell", "Qantas","Singapore Airlines", "FoodStuffs"};
 
     // Company Popularity [Initially Zero, Increases every click]
     static int[] popularity = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     // The Apps Four Categories. The Country name and respective flag.
     static String[] countryNames = { "Australia", "New Zealand", "Singapore", "United States"};
@@ -33,8 +34,8 @@ public class DataProvider {
             R.drawable.logo_006, R.drawable.logo_007, R.drawable.logo_008, R.drawable.logo_009, R.drawable.logo_010,  R.drawable.logo_011, R.drawable.logo_012,
             R.drawable.logo_013, R.drawable.logo_014, R.drawable.logo_015, R.drawable.logo_016, R.drawable.logo_017, R.drawable.logo_018, R.drawable.logo_019,
             R.drawable.logo_020, R.drawable.logo_021, R.drawable.logo_022, R.drawable.logo_023, R.drawable.logo_024, R.drawable.logo_025, R.drawable.logo_026,
-            R.drawable.logo_027, R.drawable.logo_028, R.drawable.logo_029, R.drawable.logo_030, R.drawable.logo_031};// R.drawable.logo_032, R.drawable.logo_033,
-//            R.drawable.logo_034, R.drawable.logo_035, R.drawable.logo_036, R.drawable.logo_0037, R.drawable.logo_038, R.drawable.logo_039, R.drawable.logo_040};
+            R.drawable.logo_027, R.drawable.logo_028, R.drawable.logo_029, R.drawable.logo_030, R.drawable.logo_031, R.drawable.logo_032, R.drawable.logo_033,
+            R.drawable.logo_034, R.drawable.logo_035, R.drawable.logo_036, R.drawable.logo_037, R.drawable.logo_038, R.drawable.logo_039, R.drawable.logo_040};
 
     static int[] dayAdresses = {R.drawable.day_000, R.drawable.day_001, R.drawable.day_002, R.drawable.day_003, R.drawable.day_004, R.drawable.day_005,
             R.drawable.day_006, R.drawable.day_007, R.drawable.day_008, R.drawable.day_009, R.drawable.day_010, R.drawable.day_011, R.drawable.day_012,
@@ -61,7 +62,7 @@ public class DataProvider {
     static int[] AustraliaId={1, 6, 7, 17, 18, 19, 20, 21, 22, 23};
     static int[] NZId={3, 4, 5, 9, 10, 11, 12, 13 ,14, 15 ,16};
     static int[] SingaporeId={2, 8, 24, 25, 26, 27, 28, 29, 30, 31};
-    static int[] USId={0};
+    static int[] USId={0, 32, 33, 34, 35, 36, 37, 38, 39, 40};
 
     // --------------------------------------------------------------------------------------------
     // Generate StockData Given a ID Number
