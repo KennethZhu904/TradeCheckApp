@@ -6,7 +6,7 @@ The development of the TradeCheck app was made by Kenneth and Daniel.
 The purpose of the project is to develop a showcasing stock market app that will provide easy access to investing in the stock market. The showcasing stock market app will show up to date investment analytics for shareholders and investors at their fingertips.
 Given recent global events, it is increasingly important for the public to have accessibility to information about the economy and stock market. The app is also designed for users to check how the companies are performing in the stock market and to promote an understanding of the awareness of the global economy.
 
-In this report, Kenneth is in charge of designing System Modelling and Daniel is in charge of System Design.
+Kenneth is in charge of designing System Modelling (The layout and the getting movement between Categories, Companies and Detail Activity.  and Daniel is in charge of System Design.
 
 <TextView
     android:text="Hi there!"
